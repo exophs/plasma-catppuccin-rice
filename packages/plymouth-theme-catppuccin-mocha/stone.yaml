@@ -1,0 +1,25 @@
+name        : plymouth-theme-catppuccin-mocha
+version     : "2026.10.21"
+release     : 1
+homepage    : https://github.com/catppuccin/plymouth
+# No upstreams: theme files are vendored in pkg/theme
+summary     : Catppuccin Mocha boot splash for Plymouth
+description : |
+    Catppuccin Mocha Plymouth theme, plus a shared initrd overlay that makes
+    the initrd's plymouthd use it (loaded after 50-default.initrd).
+license     : MIT
+builddeps   :
+    - binary(cpio)
+install     : |
+    _theme=%(installroot)%(datadir)/plymouth/themes/catppuccin-mocha
+    %install_dir ${_theme}
+    %install_file %(pkgdir)/theme/* -t ${_theme}/
+
+    # Overlay initrd: theme + plymouthd.conf selecting it
+    %install_dir initrd/usr/share/plymouth/themes/catppuccin-mocha initrd/etc/plymouth
+    cp %(pkgdir)/theme/* initrd/usr/share/plymouth/themes/catppuccin-mocha/
+    cp %(pkgdir)/plymouthd.conf initrd/etc/plymouth/plymouthd.conf
+    pushd initrd
+    find . | cpio -o -H newc --device-independent --reproducible > ../catppuccin-plymouth.initrd
+    popd
+    %install_file catppuccin-plymouth.initrd %(installroot)%(libdir)/kernel/initrd.d/90-catppuccin-plymouth.initrd

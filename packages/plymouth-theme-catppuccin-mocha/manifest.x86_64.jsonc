@@ -1,0 +1,30 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"plymouth-theme-catppuccin-mocha": {
+			"build-depends": [
+				"binary(cpio)"
+			],
+			"files": [
+				"/usr/lib/kernel/initrd.d/90-catppuccin-plymouth.initrd",
+				"/usr/share/plymouth/themes/catppuccin-mocha/bullet.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/capslock.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/catppuccin-mocha.plymouth",
+				"/usr/share/plymouth/themes/catppuccin-mocha/entry.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/keyboard.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/lock.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/throbber-0.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/throbber-1.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/throbber-2.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/throbber-3.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/throbber-4.png",
+				"/usr/share/plymouth/themes/catppuccin-mocha/throbber-5.png"
+			],
+			"name": "plymouth-theme-catppuccin-mocha"
+		}
+	},
+	"source-name": "plymouth-theme-catppuccin-mocha",
+	"source-release": "1",
+	"source-version": "2026.10.21"
+}
