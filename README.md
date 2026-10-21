@@ -14,6 +14,16 @@ A Catppuccin **Mocha** (Mauve accent) setup for **KDE Plasma 6** on Wayland, bui
   starship prompt, fastfetch, btop, cava
 - **Extras:** Spotify (Spicetify), Vesktop/Discord and a Plymouth boot splash, all in Mocha
 
+## Screenshots
+
+![Konsole with fastfetch, Dolphin and cava](screenshots/workflow.png)
+
+![Clean desktop](screenshots/desktop.png)
+
+| Top bar | Dock |
+|---|---|
+| ![Top bar](screenshots/topbar.png) | ![Dock](screenshots/dock.png) |
+
 ## Quick start
 
 ```bash
