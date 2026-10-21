@@ -12,9 +12,6 @@ SAVEHIST=50000
 setopt HIST_IGNORE_ALL_DUPS SHARE_HISTORY HIST_REDUCE_BLANKS HIST_IGNORE_SPACE
 
 # ---- completion -----------------------------------------------------------
-# The static build ships its completion functions under share/zsh/<ver>/functions
-# (static zsh builds keep completions in ~/.local/opt/zsh; harmless if absent)
-[[ -d $HOME/.local/opt/zsh/share/zsh ]] && fpath=($HOME/.local/opt/zsh/share/zsh/*/functions(N) $fpath)
 autoload -Uz compinit
 compinit -C
 zstyle ':completion:*' menu select
