@@ -4,8 +4,8 @@ A Catppuccin **Mocha** (Mauve accent) setup for **KDE Plasma 6** on Wayland, bui
 [AerynOS](https://aerynos.com) with Plasma 6.7. It should work on any distro with Plasma 6.
 
 - **Top bar:** app launcher, Kara workspace pills, global app menu, now-playing music controls,
-  audio visualizer, centered clock, CPU/RAM graphs and tray, each group in its own floating
-  rounded "pill" (Panel Colorizer)
+  audio visualizer, centered clock, CPU/RAM graphs, tray and a power menu (Lock, Log Out, Sleep,
+  Restart, Shut Down), each group in its own floating rounded "pill" (Panel Colorizer)
 - **Dock:** centered, floating, fit-to-content, always visible, compact icon spacing
 - **Windows:** rounded corners with a mauve outline on the focused window, blur behind
   Konsole/menus/panels, Klassy decorations, Kvantum Catppuccin app style
@@ -170,6 +170,7 @@ GTK, cursors, btop, cava, starship, Plymouth, Spicetify, Discord) plus
 [Klassy](https://github.com/paulmcauley/klassy),
 [Panel Colorizer](https://github.com/luisbocanegra/plasma-panel-colorizer),
 [PlasMusic Toolbar](https://github.com/ccatterina/plasmusic-toolbar),
+[Shutdown or Switch](https://github.com/Davide-sd/shutdown_or_switch),
 [Kara](https://github.com/dhruv8sh/kara),
 [KDE Rounded Corners](https://github.com/matinlotfali/KDE-Rounded-Corners),
 [Better Blur DX](https://github.com/xarblu/kwin-effects-better-blur-dx),

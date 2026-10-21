@@ -88,12 +88,13 @@ if ! fc-list | grep -qi 'JetBrainsMono Nerd'; then
   fc-cache -f >/dev/null
 fi
 
-step "Plasma widgets (Panel Colorizer, PlasMusic Toolbar)"
+step "Plasma widgets (Panel Colorizer, PlasMusic Toolbar, Shutdown or Switch)"
 latest_asset() {  # repo, name-regex
   curl -fsSL "https://api.github.com/repos/$1/releases/latest" |
     grep -oE '"browser_download_url": *"[^"]+"' | cut -d'"' -f4 | grep -E "$2" | head -1
 }
-for spec in "luisbocanegra/plasma-panel-colorizer|\.plasmoid$" "ccatterina/plasmusic-toolbar|\.plasmoid$"; do
+for spec in "luisbocanegra/plasma-panel-colorizer|\.plasmoid$" "ccatterina/plasmusic-toolbar|\.plasmoid$" \
+            "Davide-sd/shutdown_or_switch|\.plasmoid$"; do
   url=$(latest_asset "${spec%%|*}" "${spec#*|}") || true
   if [[ -n "$url" ]]; then
     fetch "$url" "$TMP/w.plasmoid"

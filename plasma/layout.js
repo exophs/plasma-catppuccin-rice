@@ -61,6 +61,18 @@ for (var screen = 0; screen < screenCount; screen++) {
     add(top, "org.kde.plasma.systemmonitor.memory");
     add(top, "org.kde.plasma.systemtray");
     add(top, "org.kde.plasma.showdesktop");
+    // Power menu: Lock / Log Out / Sleep / Restart / Shut Down
+    if (!add(top, "org.kde.plasma.shutdownorswitch", function (w) {
+        cfg(w, ["General"], { showSuspend: true, showName: false, showIcon: true });
+    })) {
+        add(top, "org.kde.plasma.lock_logout", function (w) {
+            cfg(w, ["General"], {
+                show_lockScreen: false, show_requestLogout: false, show_requestShutDown: false,
+                show_requestReboot: false, show_suspendToRam: false, show_suspendToDisk: false,
+                show_switchUser: false, show_requestLogoutScreen: true
+            });
+        });
+    }
     if (colorizerPreset) {
         add(top, "luisbocanegra.panel.colorizer", function (w) {
             cfg(w, ["General"], {
